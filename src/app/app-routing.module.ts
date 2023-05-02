@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren:()=>import('./projects/projects.module').then(m=>m.ProjectsModule)
   },
   {
+		path: '',
+		loadChildren:()=>import('./home/home.module').then(m=>m.HomeModule)
+	},
+  {
 		path: '**',
 		component: NotFoundComponent,
 	}
