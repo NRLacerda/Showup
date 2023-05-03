@@ -1,0 +1,22 @@
+<mat-toolbar>
+  <button mat-raised-button (click)="butSideMenu()">
+    <mat-icon class="icon" *ngIf="!showNavSid">menu</mat-icon>
+    <mat-icon class="icon" *ngIf="showNavSid">close</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-drawer-container class="example-container" [hasBackdrop]="unset">
+    <mat-drawer #drawer [mode]="tipo">I'm a drawer</mat-drawer>
+    <mat-drawer-content>
+      <p>TESTE</p>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  
+  
