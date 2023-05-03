@@ -1,3 +1,110 @@
+@import '/src/app/shared/sass-variables/sass-variables.scss';
+
+
+mat-toolbar {  
+
+  mat-toolbar-row.main {
+    background-color: $base-color;
+    justify-content: space-between;
+  
+    .menu {
+      display: flex;
+
+      .title mat-icon {
+        font-size: 24px;
+      }
+
+      .title-inicio {
+        padding-top: 0.56rem;
+      }
+    }
+
+    .title-inicio {
+      cursor: pointer;
+    }
+
+    mat-icon {
+      transition: all 0.4s;
+
+      &.icon {   
+        color: white;
+        font-size: 2.2rem;
+        height: unset;
+        width: unset;
+      }
+    }
+
+    button {
+      width: unset;
+      transition: all 0.4s;
+      color: white;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    button:hover, mat-icon:hover{
+      color: rgba(255, 255, 255, 0.466);
+      cursor: pointer;
+    } 
+
+    span {
+      color: white;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+
+    div.collapsed {
+      button {
+        mat-icon {
+          color: white;    
+        }      
+      }
+    }
+
+    div.not-collapsed {
+      display: flex;
+      justify-content: space-between;  
+      
+      .title-config {
+        cursor: pointer;
+      }
+
+      .title-config::after{
+        display: inline-block;
+        margin-left: .255rem;
+        vertical-align: .19rem;
+        content: "";
+        border-top: .3rem solid;
+        border-right: .3rem solid transparent;
+        border-bottom: 0;
+        border-left: .3rem solid transparent;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+
+
 .example-spacer {
     flex: 1 1 auto;
+  }
+  .example-container {
+    width: 500px;
+    height: 300px;
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }
+  .SideNav {
+    transform: rotate(45deg);
+    background-color: red($color: #000000);
   }

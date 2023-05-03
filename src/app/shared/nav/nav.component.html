@@ -1,8 +1,9 @@
-<mat-toolbar>
-  <button mat-raised-button (click)="butSideMenu()">
-    <mat-icon class="icon" *ngIf="!showNavSid">menu</mat-icon>
+
+<mat-toolbar-row class="main">
+  <button type="button" mat-icon-button disableRipple="true" class="title" (click)="butSideMenu()">
+    <mat-icon class="icon" *ngIf="!showNavSid">apps</mat-icon>
     <mat-icon class="icon" *ngIf="showNavSid">close</mat-icon>
-  </button>
+</button>
   <span>My App</span>
   <span class="example-spacer"></span>
   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
@@ -11,12 +12,19 @@
   <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
     <mat-icon>share</mat-icon>
   </button>
-</mat-toolbar>
-<mat-drawer-container class="example-container" [hasBackdrop]="unset">
-    <mat-drawer #drawer [mode]="tipo">I'm a drawer</mat-drawer>
-    <mat-drawer-content>
-      <p>TESTE</p>
-    </mat-drawer-content>
-  </mat-drawer-container>
-  
+</mat-toolbar-row>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+  </mat-drawer>
+</mat-drawer-container>
+<div #nav>
+<h1>TESTTTTTTTTTTTTTTTTTTE</h1>
+</div>
+
   
