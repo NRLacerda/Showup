@@ -1,6 +1,4 @@
-*{
-  font-family: 'Playfair Display', serif;    
-}
+
 .main{
   background-color: #000000;
   color: #f1f1f1;
@@ -49,26 +47,24 @@
 .link {
   width: 0;
   display: block;
-  border: 2px solid black;
   margin: 0px;
   transition: 0.5s ease-in-out;
 
 }
 .link:hover {
-  width: 75%;
+  width: 85%;
   height: 40px;
   margin: 15px;  
-  border: 2px solid black;
   position: static;
-  animation: glow 1s ease-in-out infinite;
+  animation: glow 2s ease-in-out infinite;
 }
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(9, 255, 0), 0 0 50px rgb(9, 255, 0), 0 0 80px rgb(9, 255, 0), 0 0 100px rgb(9, 255, 0);
+    box-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 12px #fff, 0 0 20px rgb(9, 255, 0), 0 0 35px rgb(9, 255, 0), 0 0 50px rgb(9, 255, 0), 0 0 80px rgb(9, 255, 0);
   }
   100% {
-    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 35px #fff, 0 0 50px rgb(99, 255, 0), 0 0 80px rgb(9, 255, 0), 0 0 100px rgb(9, 255, 0), 0 0 120px rgb(9, 255, 0);
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 25px rgb(99, 255, 0), 0 0 30px rgb(9, 255, 0), 0 0 60px rgb(9, 255, 0), 0 0 80px rgb(9, 255, 0);
   }
 }
 
@@ -76,6 +72,7 @@
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #f1f1f1;
+  transform: scale(1.15);
 }
 
 /* Position and style the close button (top right corner) */
