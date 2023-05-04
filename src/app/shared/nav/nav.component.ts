@@ -11,7 +11,7 @@ export class NavComponent {
   }
   closeNav(){
     var SideNav = document.getElementById("nav")
-
+    
     if(SideNav){
       SideNav.style.width="0"
     }
