@@ -1,110 +1,94 @@
-@import '/src/app/shared/sass-variables/sass-variables.scss';
-
-
-mat-toolbar {  
-
-  mat-toolbar-row.main {
-    background-color: $base-color;
-    justify-content: space-between;
-  
-    .menu {
-      display: flex;
-
-      .title mat-icon {
-        font-size: 24px;
-      }
-
-      .title-inicio {
-        padding-top: 0.56rem;
-      }
-    }
-
-    .title-inicio {
-      cursor: pointer;
-    }
-
-    mat-icon {
-      transition: all 0.4s;
-
-      &.icon {   
-        color: white;
-        font-size: 2.2rem;
-        height: unset;
-        width: unset;
-      }
-    }
-
-    button {
-      width: unset;
-      transition: all 0.4s;
-      color: white;
-      font-size: 1rem;
-      font-weight: 400;
-    }
-
-    button:hover, mat-icon:hover{
-      color: rgba(255, 255, 255, 0.466);
-      cursor: pointer;
-    } 
-
-    span {
-      color: white;
-      font-weight: 400;
-      font-size: 1rem;
-    }
-
-    div.collapsed {
-      button {
-        mat-icon {
-          color: white;    
-        }      
-      }
-    }
-
-    div.not-collapsed {
-      display: flex;
-      justify-content: space-between;  
-      
-      .title-config {
-        cursor: pointer;
-      }
-
-      .title-config::after{
-        display: inline-block;
-        margin-left: .255rem;
-        vertical-align: .19rem;
-        content: "";
-        border-top: .3rem solid;
-        border-right: .3rem solid transparent;
-        border-bottom: 0;
-        border-left: .3rem solid transparent;
-        font-size: 1.1rem;
-      }
-    }
-  }
+*{
+  font-family: 'Playfair Display', serif;    
 }
-
-
+.main{
+  background-color: #000000;
+  color: #f1f1f1;
+}
+#menu:hover{
+  transform: rotate(90deg);
+}
 
 .example-spacer {
     flex: 1 1 auto;
   }
-  .example-container {
-    width: 500px;
-    height: 300px;
+ /* The side navigation menu */
+ .sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0;  /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  color: #f1f1f1;
+  background-color: #000000; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #9c9c9c;
+  display: block;
+  transition: 0.3s;
+}
+/*.line {
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: width 0.3s ease-in-out;
+}
+.line:hover {
+  width: 100px;
+}*/
+
+.link {
+  width: 0;
+  display: block;
+  border: 2px solid black;
+  margin: 0px;
+  transition: 0.5s ease-in-out;
+
+}
+.link:hover {
+  width: 75%;
+  height: 40px;
+  margin: 15px;  
+  border: 2px solid black;
+  position: static;
+  animation: glow 1s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(9, 255, 0), 0 0 50px rgb(9, 255, 0), 0 0 80px rgb(9, 255, 0), 0 0 100px rgb(9, 255, 0);
   }
-  
-  .example-sidenav-content {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
+  100% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 35px #fff, 0 0 50px rgb(99, 255, 0), 0 0 80px rgb(9, 255, 0), 0 0 100px rgb(9, 255, 0), 0 0 120px rgb(9, 255, 0);
   }
-  
-  .example-sidenav {
-    padding: 20px;
-  }
-  .SideNav {
-    transform: rotate(45deg);
-    background-color: red($color: #000000);
-  }
+}
+
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 

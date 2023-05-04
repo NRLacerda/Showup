@@ -1,30 +1,21 @@
-
-<mat-toolbar-row class="main">
-  <button type="button" mat-icon-button disableRipple="true" class="title" (click)="butSideMenu()">
-    <mat-icon class="icon" *ngIf="!showNavSid">apps</mat-icon>
-    <mat-icon class="icon" *ngIf="showNavSid">close</mat-icon>
-</button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
-</mat-toolbar-row>
-
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
-    </button>
-  </mat-drawer>
-</mat-drawer-container>
-<div #nav>
-<h1>TESTTTTTTTTTTTTTTTTTTE</h1>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<div id="nav" class="sidenav">
+  <a class="closebtn" (click)="closeNav()">&times;</a>
+  <div class="line link"><a href="#">Sobre</a></div>  
+  <div class="line link"><a href="#">Projetos</a></div>  
+  <div class="line link"><a href="#">Experiência</a></div>  
+  <div class="line link"><a href="#">Contato</a></div>  
 </div>
-
-  
+<div>
+  <p>
+    <mat-toolbar color="main">
+      <button (click)="openNav()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <span class="material-symbols-outlined">
+          menu
+        </span>
+      </button>
+      <span> Nicolas Rocha Lacerda</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+  </p>
+</div>
