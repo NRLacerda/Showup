@@ -1,20 +1,19 @@
 .conteiner {
     display: grid;
-    width: 100vw;
-    grid-template-columns: repeat(3,0.3fr);
+    grid-template-columns: repeat(3,1fr);
 }
-//there's the grid
 .repo{
     margin: 20px;
     z-index: 0;
 }
 .central{
-display: flex;
-justify-content: center;
-margin-top: 5vh;
-color: white;
-h1{
-    font-weight: bold;
-    font-size: 2em;
-}
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    color: white;
+    h1{
+        font-weight: bold;
+        font-size: 2em;
+    }
 }
