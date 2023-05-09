@@ -1,12 +1,12 @@
 
 .main{
-  background-color: #000000;
+  background-color: #ff0000;
   color: #f1f1f1;
 }
-#menu:hover{
-  transform: rotate(90deg);
+.central{
+  display: flex;
+  justify-content: center;
 }
-
 .example-spacer {
     flex: 1 1 auto;
   }
@@ -34,45 +34,25 @@
   display: block;
   transition: 0.3s;
 }
-/*.line {
-  width: 0;
-  height: 2px;
-  background-color: rgb(255, 255, 255);
-  transition: width 0.3s ease-in-out;
-}
-.line:hover {
-  width: 100px;
-}*/
 
-.link {
-  width: 0;
-  display: block;
-  margin: 0px;
-  transition: 0.5s ease-in-out;
-
-}
-.link:hover {
-  width: 85%;
-  height: 40px;
-  margin: 15px;  
-  position: static;
-  animation: glow 2s ease-in-out infinite;
+a {
+  position: relative; /* Make the anchor tag a positioned element */
+  display: inline-block; /* Make the anchor tag an inline-block element */
 }
 
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 12px #fff, 0 0 20px rgb(9, 255, 0), 0 0 35px rgb(9, 255, 0), 0 0 50px rgb(9, 255, 0), 0 0 80px rgb(9, 255, 0);
-  }
-  100% {
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 25px rgb(99, 255, 0), 0 0 30px rgb(9, 255, 0), 0 0 60px rgb(9, 255, 0), 0 0 80px rgb(9, 255, 0);
-  }
+a::before {
+  content: ""; /* Add an empty content to the pseudo-element */
+  position: absolute; /* Position the pseudo-element relative to its parent */
+  bottom: 0; /* Position the pseudo-element at the bottom of the anchor tag */
+  left: 0; /* Position the pseudo-element at the left of the anchor tag */
+  width: 0; /* Set the initial width of the pseudo-element to 0 */
+  height: 2px; /* Set the height of the pseudo-element to 2px */
+  background-color: rgb(195, 0, 255); /* Set the background color of the pseudo-element */
+  transition: width 0.3s; /* Add a transition effect to the width property */
 }
 
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-  transform: scale(1.15);
+a:hover::before {
+  width: 100%; /* Set the width of the pseudo-element to 100% on hover */
 }
 
 /* Position and style the close button (top right corner) */
@@ -89,3 +69,6 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 } 
+.linha{
+  width: max-content;
+}

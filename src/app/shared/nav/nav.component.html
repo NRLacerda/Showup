@@ -1,21 +1,24 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 <div id="nav" class="sidenav">
-  <a class="closebtn" (click)="closeNav()">&times;</a>
-  <div class="line link"><a href="#" (click)="closeNav()">Sobre</a></div>  
-  <div class="line link"><a [routerLink]="['/projects']" (click)="closeNav()">Projetos</a></div>  
-  <div class="line link"><a href="#" (click)="closeNav()">Experiência</a></div>  
-  <div class="line link"><a href="#" (click)="closeNav()">Contato</a></div>  
+  <span class="closebtn" (click)="closeNav()">&times;</span>
+  <a href="#" (click)="closeNav()">Sobre</a>
+  <div><p class="linha"></p></div>  
+  <a [routerLink]="['/projects']" (click)="closeNav()">Projetos</a>
+  <div><p class="linha"></p></div>  
+  <a href="#" (click)="closeNav()">Experiência</a>
+  <div><p class="linha"></p></div>  
+  <a href="#" (click)="closeNav()">Contato</a>
 </div>
 <div>
-  <p>
     <mat-toolbar color="main">
       <button (click)="openNav()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <span class="material-symbols-outlined">
           menu
         </span>
       </button>
-      <span> </span>
-      <span class="example-spacer"></span>
+      <div class="central">
+        <span > Nicolas Rocha Lacerda</span>
+
+      </div>
     </mat-toolbar>
-  </p>
 </div>

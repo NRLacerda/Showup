@@ -13,9 +13,9 @@ export class RepositoryComponent {
     this.posts=[];
   }
   ngOnInit() {
-    this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe(data => {
+    /*this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe(data => {
       this.posts = data;
-    });
+    });*/
   }
 
 }
