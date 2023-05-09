@@ -7,6 +7,9 @@
   display: flex;
   justify-content: center;
 }
+.toolbar{
+  z-index: 2;
+}
 .example-spacer {
     flex: 1 1 auto;
   }
@@ -15,7 +18,7 @@
   height: 100%; /* 100% Full-height */
   width: 0;  /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  z-index:1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
   color: #f1f1f1;
@@ -63,6 +66,9 @@ a:hover::before {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+.sidenavOpen{
+  width: 180px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

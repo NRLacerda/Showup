@@ -27,9 +27,8 @@ export class NavComponent {
     var SideNav = document.getElementById("nav")
 
     if(SideNav){
-      SideNav.style.width="250px"
+      SideNav.style.width="180px"
+      SideNav.classList.toggle("sidenavOpen");
     }
-
   }
-  
 }
