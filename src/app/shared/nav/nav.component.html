@@ -2,15 +2,12 @@
 <div id="nav" class="sidenav">
   <span class="closebtn" (click)="closeNav()">&times;</span>
   <a href="#" (click)="closeNav()">Sobre</a>
-  <div><p class="linha"></p></div>  
   <a [routerLink]="['/projects']" (click)="closeNav()">Projetos</a>
-  <div><p class="linha"></p></div>  
   <a href="#" (click)="closeNav()">Experiência</a>
-  <div><p class="linha"></p></div>  
   <a href="#" (click)="closeNav()">Contato</a>
 </div>
 <div>
-    <mat-toolbar color="main">
+    <mat-toolbar color="primary">
       <button (click)="openNav()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
         <span class="material-symbols-outlined">
           menu

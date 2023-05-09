@@ -2,13 +2,14 @@
     position: relative;
     width: 400px;
     height: 400px;    
-    background-color: rgb(83, 83, 83);
+    background-color: rgb(61, 61, 61);
     color: white;
     font-weight: 600;
     border-radius: 25px;
     transition: background-color 0.5s ease-in-out;
     h1{
         font-weight: bold;
+        font-size: large;
     }
 }
 .imagem{
@@ -17,7 +18,7 @@
     border-radius: 25px;
 }
 .repositorio:hover{
-    background-color: rgb(145, 145, 145);
+    background-color: rgb(73, 73, 73);
     transition: background-color 0.5s ease-in-out;
 }
 .imagem{
